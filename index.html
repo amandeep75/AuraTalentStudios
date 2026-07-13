@@ -3,27 +3,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Talent Studios | Digital Influencer Management</title>
+
+    <title>Aura Talent Studios | Digital Talent Management</title>
+
+    <meta name="description" content="Aura Talent Studios develops and manages original creator brands for social media, entertainment and commercial collaborations.">
+
+    <meta property="og:title" content="Aura Talent Studios">
+    <meta property="og:description" content="Digital Talent Management">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://auratalentstudios.online">
+
+    <meta name="theme-color" content="#111111">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-        header { background: #f4f4f4; padding: 2rem; text-align: center; }
-        main { padding: 2rem; max-width: 800px; margin: auto; text-align: center; }
-        footer { background: #333; color: #fff; padding: 1rem; text-align: center; font-size: 0.8rem; margin-top: 2rem; }
-        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px; }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Inter',sans-serif;
+            background:#0f1117;
+            color:#ffffff;
+            line-height:1.7;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:auto;
+        }
+
+        header{
+
+            min-height:75vh;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            text-align:center;
+
+            background:
+            radial-gradient(circle at top,#30364d 0%,#0f1117 65%);
+        }
+
+        .hero h1{
+            font-size:4rem;
+            font-weight:800;
+            letter-spacing:-2px;
+        }
+
+        .hero h2{
+
+            margin-top:15px;
+
+            font-weight:500;
+
+            color:#cfcfcf;
+
+            font-size:1.4rem;
+        }
+
+        .hero p{
+
+            max-width:700px;
+
+            margin:35px auto;
+
+            color:#b7b7b7;
+
+            font-size:1.1rem;
+        }
+
+        .buttons{
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:15px;
+
+            flex-wrap:wrap;
+        }
+
+        .btn{
+
+            padding:14px 28px;
+
+            border-radius:999px;
+
+            transition:.25s;
+
+            font-weight:600;
+        }
+
+        .btn-primary{
+
+            background:#ffffff;
+
+            color:#111;
+        }
+
+        .btn-primary:hover{
+
+            transform:translateY(-2px);
+
+            background:#efefef;
+        }
+
+        .btn-secondary{
+
+            border:1px solid #4d4d4d;
+
+            color:#ffffff;
+        }
+
+        .btn-secondary:hover{
+
+            background:#20232d;
+        }
+
+        section{
+
+            padding:90px 0;
+        }
+
+        h3{
+
+            text-align:center;
+
+            font-size:2rem;
+
+            margin-bottom:20px;
+        }
+
+        .section-text{
+
+            max-width:760px;
+
+            margin:auto;
+
+            text-align:center;
+
+            color:#c7c7c7;
+
+            font-size:1.05rem;
+        }
+
+        .card{
+
+            max-width:700px;
+
+            margin:50px auto 0;
+
+            background:#191c25;
+
+            border:1px solid #2b3140;
+
+            border-radius:20px;
+
+            padding:45px;
+
+            text-align:center;
+
+            box-shadow:0 10px 40px rgba(0,0,0,.35);
+        }
+
+        .card h4{
+
+            font-size:2rem;
+
+            margin-bottom:12px;
+        }
+
+        .subtitle{
+
+            color:#b7b7b7;
+
+            margin-bottom:28px;
+        }
+
+        .tags{
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:12px;
+
+            flex-wrap:wrap;
+
+            margin-bottom:35px;
+        }
+
+        .tag{
+
+            background:#262b39;
+
+            padding:8px 18px;
+
+            border-radius:999px;
+
+            font-size:.9rem;
+        }
+
+        .instagram{
+
+            display:inline-flex;
+
+            align-items:center;
+
+            gap:10px;
+
+            padding:14px 26px;
+
+            border-radius:999px;
+
+            background:#E1306C;
+
+            color:white;
+
+            font-weight:600;
+
+            transition:.25s;
+        }
+
+        .instagram:hover{
+
+            transform:translateY(-2px);
+        }
+
+        .contact{
+
+            text-align:center;
+        }
+
+        .email{
+
+            font-size:1.3rem;
+
+            margin:30px 0;
+
+            font-weight:600;
+        }
+
+        footer{
+
+            border-top:1px solid #2c2c2c;
+
+            padding:40px 20px;
+
+            text-align:center;
+
+            color:#999;
+
+            font-size:.95rem;
+        }
+
+        @media(max-width:768px){
+
+            .hero h1{
+
+                font-size:2.6rem;
+            }
+
+            .hero h2{
+
+                font-size:1.15rem;
+            }
+
+            .card{
+
+                padding:30px 24px;
+            }
+
+        }
+
     </style>
+
 </head>
+
 <body>
-    <header>
-        <h1>Aura Talent Studios</h1>
-    </header>
-    <main>
-        <h2>Premier Management for Digital Personas</h2>
-        <p>Aura Talent Studios represents next-generation digital talent and virtual influencers.</p>
-        <a href="mailto:contact@auratalentstudios.online" class="btn">Contact for Inquiries</a>
-    </main>
-    <footer>
-        <p>&copy; 2026 Aura Talent Studios. All rights reserved.</p>
-        <p>Aura Talent Studios is an operating unit of Tiwary Labs.</p>
-    </footer>
+
+<header>
+
+    <div class="container">
+
+        <div class="hero">
+
+            <h1>Aura Talent Studios</h1>
+
+            <h2>Digital Talent Management</h2>
+
+            <p>
+                Aura Talent Studios develops and manages original creator brands
+                for social media, entertainment, and commercial collaborations.
+            </p>
+
+            <div class="buttons">
+
+                <a class="btn btn-primary"
+                   href="mailto:contact@auratalentstudios.online">
+                    Business Inquiries
+                </a>
+
+                <a class="btn btn-secondary"
+                   href="#talent">
+                    Featured Talent
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section>
+
+    <div class="container">
+
+        <h3>About Us</h3>
+
+        <p class="section-text">
+
+            Aura Talent Studios is a creative management studio focused on
+            developing distinctive creator brands and building long-term
+            opportunities across social platforms, entertainment, and brand
+            collaborations.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section id="talent">
+
+    <div class="container">
+
+        <h3>Featured Talent</h3>
+
+        <div class="card">
+
+            <h4>Avantika Negi</h4>
+
+            <div class="subtitle">
+
+                Represented by Aura Talent Studios
+
+            </div>
+
+            <div class="tags">
+
+                <span class="tag">Lifestyle</span>
+
+                <span class="tag">Fashion</span>
+
+                <span class="tag">Travel</span>
+
+            </div>
+
+            <a class="instagram"
+               href="https://www.instagram.com/avan.tikanegi2k3/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                📷 Visit Instagram
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="container">
+
+        <h3>Business Inquiries</h3>
+
+        <div class="contact">
+
+            <p class="section-text">
+
+                For partnerships, collaborations, licensing, media inquiries,
+                or other business opportunities, please contact us.
+
+            </p>
+
+            <div class="email">
+
+                contact@auratalentstudios.online
+
+            </div>
+
+            <a class="btn btn-primary"
+               href="mailto:contact@auratalentstudios.online">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+
+        © 2026 Aura Talent Studios. All rights reserved.
+
+    </p>
+
+    <p style="margin-top:10px;">
+
+        Aura Talent Studios is an operating unit of Tiwary Labs.
+
+    </p>
+
+</footer>
+
 </body>
 </html>
